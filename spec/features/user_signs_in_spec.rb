@@ -1,8 +1,6 @@
 feature "user signs in" do
   before(:each) do
     @user = create(:user)
-    @user.confirmed_at = Time.now
-    @user.save
   end
 
   scenario "user logins in from the home page" do

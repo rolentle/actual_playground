@@ -1,8 +1,13 @@
 FactoryBot.define do
   factory :user do
-    email "test@example.com"
+    sequence(:email) { Faker::Internet.unique.email }
     password "password"
     password_confirmation "password"
-    username "myusername"
+    sequence(:username) { Faker::Internet.unique.user_name }
+
+    after(:create) do |user|
+      user.confirmed_at = Time.now
+      user.save
+    end
   end
 end
