@@ -12,7 +12,7 @@ class ShowDetailsContainer extends React.Component {
       title: '',
       description: '',
       imageUrl: '',
-      avgRating: 0,
+      avgRating: null,
       userRating: {},
       ratings: [],
       showUserRatingForm: false
@@ -25,7 +25,7 @@ class ShowDetailsContainer extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`/api/v1/shows/${this.props.showId}}`).then(function(response) {
+    axios.get(`/api/v1/shows/${this.props.match.params.id}}`).then(function(response) {
      return response.data;
     }).then((show) => {
       this.setState({
@@ -49,7 +49,7 @@ class ShowDetailsContainer extends React.Component {
     imageUrl={this.state.imageUrl}
     avgRating={this.state.avgRating}
     ratings={this.state.ratings}
-    showId={this.props.showId}
+    showId={this.props.match.params.id}
     userRating={this.state.userRating}
     showUserRatingForm={this.state.showUserRatingForm}
     toggleShowUserForm={this.toggleShowUserForm}
@@ -57,13 +57,4 @@ class ShowDetailsContainer extends React.Component {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const node = document.getElementById('show_details')
-  const showId = JSON.parse(node.getAttribute('data-id'))
-  ReactDOM.render(
-    <ShowDetailsContainer
-      showId={showId}
-    />,
-    document.body.appendChild(document.createElement('div')),
- )
-})
+export default ShowDetailsContainer;

@@ -4,8 +4,20 @@ class Show < ApplicationRecord
 
   has_many :ratings
 
+  def self.by_avg_scores
+    select("shows.*,
+            count(ratings.id) as ratings_count,
+           avg(ratings.score) as avg_rating")
+      .left_outer_joins(:ratings)
+      .group('shows.id')
+      .order("count(ratings.id) desc,
+             avg(ratings.score) desc")
+  end
+
   def avg_rating
-    ratings.sum(:score) / ratings.count
+    if ratings.any?
+      ratings.average(:score).round(1)
+    end
   end
 
   def image_url

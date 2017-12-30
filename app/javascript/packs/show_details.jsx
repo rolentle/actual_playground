@@ -33,15 +33,16 @@ const ShowDetails = props => {
 
 ShowDetails.defaultProps = {
   ratings: [],
-  userRating: {}
+  userRating: {},
+  avgRating: null
 }
 
 ShowDetails.propTypes = {
-  showId: PropTypes.number,
+  showId: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   imageUrl: PropTypes.string,
-  avgRating: PropTypes.number,
+  avgRating: PropTypes.string,
   ratings: PropTypes.array,
   userRating: PropTypes.object,
   showUserRatingForm: PropTypes.bool,

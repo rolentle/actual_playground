@@ -1,5 +1,7 @@
+<%= content_for :head do %>
+  <%= javascript_pack_tag 'show_details_container' %>
+<% end %>
 <%= content_tag :div,
   id: "show_details",
   data: { id: @show.id } do %>
 <% end %>
-<%= javascript_pack_tag 'show_details_container' %>

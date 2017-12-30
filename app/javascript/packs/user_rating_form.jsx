@@ -82,7 +82,7 @@ UserRatingForm.defaultProps = {
 }
 
 UserRatingForm.propTypes = {
-  showId: PropTypes.number,
+  showId: PropTypes.string,
   userRating: PropTypes.object
 }
 
