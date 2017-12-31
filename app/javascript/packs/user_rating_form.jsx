@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import StarRatingComponent from 'react-star-rating-component';
-import axios from 'axios';
-import ReactOnRails from "react-on-rails"
+import axios from 'axios'
+import ReactOnRails from 'react-on-rails'
+
+import StarRating from './star_rating'
 
 class UserRatingForm extends React.Component {
   constructor() {
@@ -33,13 +34,11 @@ class UserRatingForm extends React.Component {
   }
 
   editRating() {
-      axios.patch(`/api/v1/shows/${this.props.showId}/ratings/${this.state.id}`, {
+    axios.patch(`/api/v1/shows/${this.props.showId}/ratings/${this.state.id}`, {
       review: this.state.review,
       score: this.state.score,
       authenticity_token: ReactOnRails.authenticityToken()
-    }).then(function(response) {
-      window.location = response.request.responseURL;
-    });
+    }).then(({request}) => window.location = request.responseURL);
   }
 
   createRating() {
@@ -47,9 +46,7 @@ class UserRatingForm extends React.Component {
       review: this.state.review,
       score: this.state.score,
       authenticity_token: ReactOnRails.authenticityToken()
-    }).then(function(response) {
-      window.location = response.request.responseURL;
-    });
+    }).then(({request}) => window.location = request.responseURL);
   }
 
   handleSubmit(event) {
@@ -65,7 +62,7 @@ class UserRatingForm extends React.Component {
       <textarea id="user-review" value={this.state.review} onChange={this.handleReviewChange}/>
       </div>
       <div>
-      <StarRatingComponent
+      <StarRating
         name="user-rating"
         value={this.state.score}
         onStarClick={this.onStarClick.bind(this)} />

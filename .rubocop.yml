@@ -1,0 +1,15 @@
+Documentation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'node_modules/**/*'
+    - 'spec/*_helper.rb'
+    - 'Gemfile'
+    - 'Rakefile'
+
+Rails:
+  Enabled: true

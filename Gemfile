@@ -45,6 +45,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 4.7'
   gem 'faker', '~> 1.6', '>= 1.6.6'
   gem 'launchy', '~> 2.4', '>= 2.4.3'
+  gem 'rubocop', '~> 0.39.0'
 end
 
 group :development do

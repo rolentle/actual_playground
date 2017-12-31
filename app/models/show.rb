@@ -1,8 +1,13 @@
 class Show < ApplicationRecord
-  has_attached_file :image, styles: { medium: "360x360>", thumb: "180x180>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
-
   has_many :ratings
+
+  has_attached_file :image, styles: {
+    medium: '360x360>',
+    thumb: '180x180>'
+  }, default_url: '/images/:style/missing.png'
+  validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
+
+  delegate :url, to: :image, prefix: true
 
   def self.by_avg_scores
     select("shows.*,
@@ -15,16 +20,10 @@ class Show < ApplicationRecord
   end
 
   def avg_rating
-    if ratings.any?
-      ratings.average(:score).round(1)
-    end
-  end
-
-  def image_url
-    image.url
+    ratings.average(:score).round(1) if ratings.any?
   end
 
   def user_rating(user)
-    ratings.where(user: user).first
+    ratings.find_by(user: user)
   end
 end

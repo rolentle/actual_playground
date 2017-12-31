@@ -18,7 +18,7 @@ class RatingsList extends React.Component {
     })
     return (
       <ul id="ratings">
-      {ratings}
+        {ratings}
       </ul>
     )
   }

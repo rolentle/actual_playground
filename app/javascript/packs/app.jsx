@@ -5,8 +5,9 @@ import {
     Route,
     Link
 } from 'react-router-dom'
-import ShowListContainer from './shows_list';
-import ShowDetailsContainer from './show_details_container';
+
+import ShowListContainer from './shows_list'
+import ShowDetailsContainer from './show_details_container'
 
 const App = () => (
     <Router>

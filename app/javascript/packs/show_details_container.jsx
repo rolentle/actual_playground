@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import ShowDetails from './show_details';
-import axios from 'axios';
+import axios from 'axios'
+
+import ShowDetails from './show_details'
 
 
 class ShowDetailsContainer extends React.Component {
@@ -25,9 +26,9 @@ class ShowDetailsContainer extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`/api/v1/shows/${this.props.match.params.id}}`).then(function(response) {
-     return response.data;
-    }).then((show) => {
+    axios.get(`/api/v1/shows/${this.props.match.params.id}}`)
+      .then(({data}) => data)
+      .then((show) => {
       this.setState({
         title: show.title,
         description: show.description,
@@ -36,9 +37,7 @@ class ShowDetailsContainer extends React.Component {
         ratings: show.ratings,
         userRating: show.user_rating
       });
-      if (show.user_rating) {
-        this.setState({showUserRatingForm: true})
-      };
+      if (show.user_rating) this.setState({showUserRatingForm: true});
     })
   }
 

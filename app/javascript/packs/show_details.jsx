@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import StarRatingComponent from 'react-star-rating-component';
-import RatingsList from './ratings_list';
-import UserRatingForm from './user_rating_form';
-import UserRatingDetails from './user_rating_details';
+
+import RatingsList from './ratings_list'
+import UserRatingForm from './user_rating_form'
+import UserRatingDetails from './user_rating_details'
+import StarRating from './star_rating'
 
 const ShowDetails = props => {
     let userRatingComponent;
@@ -13,6 +14,7 @@ const ShowDetails = props => {
     } else {
       userRatingComponent = <UserRatingForm showId={props.showId} userRating={props.userRating}/>
     }
+
   return (<div>
   <div>{props.title}</div>
   <div>{props.description}</div>
@@ -21,7 +23,7 @@ const ShowDetails = props => {
     Average Rating:
     <span>{props.avgRating}</span>
     <span>
-    <StarRatingComponent name={'avgRating'} editing={false} value={props.avgRating} />
+    <StarRating name="avgRating" editing={false} value={props.avgRating} />
     </span>
   </div>
   <div>

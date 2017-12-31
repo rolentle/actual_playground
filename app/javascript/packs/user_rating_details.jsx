@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
-import StarRatingComponent from 'react-star-rating-component';
-import axios from 'axios';
-import ReactOnRails from "react-on-rails"
+import axios from 'axios'
+import ReactOnRails from 'react-on-rails'
 
 class UserRatingDetails extends React.Component {
   constructor() {
@@ -21,9 +20,7 @@ class UserRatingDetails extends React.Component {
     event.preventDefault();
     axios.delete(`/api/v1/shows/${this.props.showId}/ratings/${this.props.userRating.id}`, {
     authenticity_token: ReactOnRails.authenticityToken()
-  }).then(function(response) {
-    window.location = response.request.responseURL;
-    });
+    }).then(({request}) => window.location = request.responseURL);
   }
 
   render() {

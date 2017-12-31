@@ -1,8 +1,5 @@
 class Rating < ApplicationRecord
   belongs_to :user
   belongs_to :show
-
-  def username
-    user.username
-  end
+  delegate :username, to: :user
 end
