@@ -1,9 +1,10 @@
 FactoryBot.define do
   factory :user do
     sequence(:email) { Faker::Internet.unique.email }
+    sequence(:first_name) { Faker::Name.unique.first_name }
+    sequence(:last_name) { Faker::Name.unique.last_name }
     password 'password'
     password_confirmation 'password'
-    sequence(:username) { Faker::Internet.unique.user_name }
 
     after(:create) do |user|
       user.confirmed_at = Time.now.utc

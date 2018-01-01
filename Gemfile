@@ -13,6 +13,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'webpacker', '~> 3.2.0'
 gem 'react_on_rails', '10.0.2'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'symmetric-encryption', '~> 4.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

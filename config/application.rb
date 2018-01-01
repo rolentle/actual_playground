@@ -29,5 +29,6 @@ module ActualPlayground
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.filter_parameters += ["first_name", "last_name", "email", "password"]
   end
 end
