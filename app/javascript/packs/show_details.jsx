@@ -15,19 +15,26 @@ const ShowDetails = props => {
       userRatingComponent = <UserRatingForm showId={props.showId} userRating={props.userRating}/>
     }
 
-  return (<div>
-  <div>{props.title}</div>
-  <div>{props.description}</div>
-  <img src={props.imageUrl} />
-  <div>
-    Average Rating:
-    <span>{props.avgRating}</span>
-    <span>
-    <StarRating name="avgRating" editing={false} value={props.avgRating} />
-    </span>
-  </div>
-  <div>
+  return (<div className="ui container">
+    <div className="ui raised text container segment">
+    <h1 className="ui header">
+      <img src={props.imageUrl} />
+      <div className="content">
+        {props.title}
+        <div className="sub header">
+          <div className="ui label">
+              <StarRating name="avgRating" editing={false} value={props.avgRating} />
+              <div className="detail">{props.avgRating}</div>
+          </div>
+        </div>
+      </div>
+    </h1>
+      <div className="ui content">
+    <p>{props.description}</p>
     {userRatingComponent}
+    </div>
+    </div>
+  <div>
   </div>
   <RatingsList ratings={props.ratings} />
   </div>)

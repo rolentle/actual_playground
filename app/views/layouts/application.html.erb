@@ -10,11 +10,16 @@
   </head>
 
   <body>
-<% if user_signed_in? %>
-  <p><%= current_user.username %></p>
-<% else %>
-  <%= link_to("Sign in", new_user_session_path) %>
-<% end %>
+    <div class="ui menu">
+      <%= link_to("Actual Playground", root_path, class: "item") %>
+      <div class="right menu">
+        <% if user_signed_in? %>
+          <a class="item"><%= current_user.username %></a>
+        <% else %>
+          <%= link_to("Sign in", new_user_session_path, class: "item") %>
+        <% end %>
+      </div>
+  </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

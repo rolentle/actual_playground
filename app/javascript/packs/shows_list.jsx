@@ -18,7 +18,14 @@ const ShowListItem = props => {
     avg_rating_display = "Not yet rated"
   }
 
-  return (<li><Link to={path}>{title}</Link> {avg_rating_display}</li>);
+  return (<div className="ui item">
+    <span>
+    <Link to={path}>{title}</Link>
+    </span>
+    <span>
+    {avg_rating_display}
+    </span>
+    </div>);
 }
 
 ShowListItem.defaultProps = {
@@ -31,7 +38,14 @@ ShowListItem.propTypes = {
 
 const ShowList = props => {
   const shows = props.shows.map(show => <ShowListItem key={show.id}show={show} />);
-  return(<ul id="shows" >{shows}</ul>);
+  return(<div className="ui container">
+    <div clasName="ui raised text container segment ">
+    <h1 className="ui header">Top Shows</h1>
+    <div className="ui ordered list" id="shows" >
+    {shows}
+    </div>
+    </div>
+    </div>);
 }
 
 ShowList.defaultProps = {

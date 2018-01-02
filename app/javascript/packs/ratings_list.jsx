@@ -1,9 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
+import { Image, Item } from 'semantic-ui-react'
+
+import StarRating from './star_rating'
 
 const Rating = props => (
-  <li> <div> {props.score} {props.review} by: {props.username} </div> </li>
+  <Item>
+    <Item.Content>
+      <Item.Header>{props.username}</Item.Header>
+  <Item.Meta><span>{props.score}</span><StarRating name='' value={props.score} editing={false}/></Item.Meta>
+      <Item.Description>{props.review}</Item.Description>
+    </Item.Content>
+  </Item>
 )
 
 Rating.propTypes = {
@@ -17,9 +26,9 @@ class RatingsList extends React.Component {
       return (<Rating key={rating.id} score={rating.score} review={rating.review} username={rating.username}/>)
     })
     return (
-      <ul id="ratings">
+      <Item.Group id="ratings">
         {ratings}
-      </ul>
+      </Item.Group>
     )
   }
 }

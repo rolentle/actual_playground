@@ -25,11 +25,17 @@ class UserRatingDetails extends React.Component {
 
   render() {
     return(
-      <div id="user-rating" >
-      Your Rating: {this.props.userRating.score}
-      Your Review: {this.props.userRating.review}
-      <a onClick={this.handleEdit} href=''>(edit)</a>
-      <a onClick={this.handleDelete} href=''>(delete)</a>
+      <div className="ui container" id="user-rating" >
+        <div className="menu">
+          <h3>My Rating: {this.props.userRating.score}</h3>
+        </div>
+      <h3>My Review:</h3>
+      <p>{this.props.userRating.review}</p>
+      <div className="ui buttons">
+      <button className="ui red mini button"  onClick={this.handleDelete}>Delete</button>
+        <div className="or"></div>
+      <button className="ui blue mini button" onClick={this.handleEdit}>Edit</button>
+      </div>
       </div>)
   }
 }

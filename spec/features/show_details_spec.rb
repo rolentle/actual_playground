@@ -66,7 +66,7 @@ feature 'Show Details', js: true do
     expect(page).not_to have_css(user_rating_form)
 
     within('#user-rating') do
-      click_on('edit')
+      click_on('Edit')
     end
 
     expect(page).to have_css(user_rating_form)
@@ -88,7 +88,7 @@ feature 'Show Details', js: true do
     review_text = 'Test Review'
     visit_show_with_user_rating(review_text)
     within(user_rating_display) do
-      click_on('delete')
+      click_on('Delete')
     end
 
     expect(page).to have_css(user_rating_form)
