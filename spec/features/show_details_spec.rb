@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 feature 'Show Details', js: true do
-  let(:show) { create(:show_with_ratings) }
-  let(:user_rating_form) { '#user-rating-form' }
-  let(:user_rating_display) { '#user-rating' }
+  let(:show) { create(:show_with_high_ratings) }
 
   scenario 'has title, description, and image' do
     visit show_path(show)
@@ -20,86 +18,57 @@ feature 'Show Details', js: true do
     end
   end
 
-  scenario 'non-logged in user tries to review and gets redirected' do
-    visit show_path(show)
-
-    rate_and_review_show
-
-    expect(current_path).to eq(new_user_session_path)
-  end
-
-  scenario 'logged in user reviews and rates' do
-    user = create(:user)
-
-    login_as user
-    visit show_path(show)
-
-    review_text = 'Test Review'
-    expect(page).to have_css(user_rating_form)
-    expect(page).not_to have_css(user_rating_display)
-    rate_and_review_show(review_text)
-
-    expect(page).not_to have_css(user_rating_form)
-    within(user_rating_display) do
-      expect(page).to have_text(review_text)
+  context 'a non-logged-in user' do
+    scenario 'tries to rate and gets redirected' do
+      visit show_path(show)
+      rate_show
+      expect(current_path).to eq(new_user_session_path)
     end
 
-    within('#ratings') do
-      expect(page).not_to have_text(user.username)
+    scenario 'tries to write a review and gets redirected' do
+      visit show_path(show)
+      click_on('Add a review')
+      expect(current_path).to eq(new_user_session_path)
     end
   end
 
-  def visit_show_with_user_rating(review_text)
-    user = create(:user)
-    login_as user
+  context 'a logged-in user' do
+    let(:user) { create(:user) }
+    before { login_as user }
 
-    show.ratings.create(user: user, score: 1, review: review_text)
+    scenario 'rates' do
+      visit show_path(show)
 
-    visit show_path(show)
-  end
-
-  scenario 'logged in user edits existing review' do
-    review_text = 'Test Review'
-    visit_show_with_user_rating(review_text)
-
-    expect(page).to have_css(user_rating_display)
-    expect(page).not_to have_css(user_rating_form)
-
-    within('#user-rating') do
-      click_on('Edit')
+      expect(user_star_rating_score).to eq(nil)
+      new_score = 3
+      rate_show(new_score)
+      expect(user_star_rating_score).to eq(new_score.to_s)
     end
 
-    expect(page).to have_css(user_rating_form)
-    expect(page).not_to have_css(user_rating_display)
-
-    new_review_text = 'NEW DATA'
-    rate_and_review_show(new_review_text)
-
-    expect(page).to have_css(user_rating_display)
-    expect(page).not_to have_css(user_rating_form)
-
-    within(user_rating_display) do
-      expect(page).not_to have_text(review_text)
-      expect(page).to have_text(new_review_text)
-    end
-  end
-
-  scenario 'logged in user deletes existing review' do
-    review_text = 'Test Review'
-    visit_show_with_user_rating(review_text)
-    within(user_rating_display) do
-      click_on('Delete')
+    scenario "clicks on 'Add a review'" do
+      visit show_path(show)
+      click_on('Add a review')
+      expect(current_path).to eq(new_show_rating_path(show))
     end
 
-    expect(page).to have_css(user_rating_form)
-    expect(page).not_to have_css(user_rating_display)
+    scenario 'updates rating' do
+      rating = create(:rating, show: show, user: user)
+      visit show_path(show)
 
-    expect(page).not_to have_text(review_text)
-  end
+      expect(user_star_rating_score).to eq(rating.score.to_s)
 
-  def rate_and_review_show(review_text = 'test')
-    fill_in('user-review', with: review_text)
-    choose('user-rating', id: 'user-rating_4', allow_label_click: true)
-    click_on('user-submit')
+      new_score = 3
+      rate_show(new_score)
+      sleep 1
+      expect(user_star_rating_score).to eq(new_score.to_s)
+    end
+
+    scenario "has a review clicks on 'Edit a review'" do
+      rating = create(:rating, show: show, user: user)
+      visit show_path(show)
+
+      click_on('Edit a review')
+      expect(current_path).to eq(edit_rating_path(rating))
+    end
   end
 end

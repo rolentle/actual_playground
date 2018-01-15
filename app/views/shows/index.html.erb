@@ -1,0 +1,17 @@
+  <div class="ui text">
+    <h1 class="ui header">Top Shows</h1>
+    <div class="ui ordered list" id="shows" >
+      <% @shows.each do |show| %>
+        <div class="ui item" >
+          <span><%= link_to show.title, show %></span>
+          <span>
+            <% if show.avg_rating %>
+              <%= show.avg_rating %>
+            <% else %>
+              Not yet rated
+            <% end %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>

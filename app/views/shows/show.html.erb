@@ -1,0 +1,83 @@
+<div class="ui text segement">
+  <h1 class="ui header">
+    <%= image_tag @show.image_url %>
+    <div class="content">
+      <%= @show.title %>
+      <div class="sub header">
+        <% if current_user && user_rating = @show.user_rating(current_user) %>
+          <div class="ui label">
+            My Rating
+            <div class="ui star rating" id='user-rating' data-rating=<%= @show.user_rating(current_user).score %> data-max-rating="5"></div>
+          </div>
+        <% else %>
+          <div class="ui label">
+            Rate this show
+            <div class="ui star rating" id='user-rating' data-max-rating="5"></div>
+          </div>
+        <% end %>
+        <% if @show.avg_rating %>
+          <div class="ui label">
+            <div class="ui star rating disabled other-rating" data-rating=<%= @show.avg_rating.round %> data-max-rating="5"></div>
+            <div class="detail"><%=@show.avg_rating %></div>
+          </div>
+        <% else %>
+          <div class="ui label">
+            <div class="detail">Not yet rated</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </h1>
+  <div class="ui content">
+    <p><%= @show.description %></p>
+    <% if current_user && user_rating = @show.user_rating(current_user) %>
+      <% if user_rating.review %>
+        <div class="ui container">
+          <h4 class-'ui header'>My Review</h4>
+          <p id='user-review'><%= user_rating.review %><%= link_to "Edit a review", edit_rating_path(user_rating) %></p>
+        </div>
+      <% else %>
+        <%= link_to "Add a review", new_show_rating_path(@show) %>
+      <% end %>
+    <% else %>
+      <%= link_to "Add a review", new_show_rating_path(@show) %>
+    <% end %>
+  </div>
+</div>
+<div class="ui text segment">
+<h3 class="ui header">Reviews</h3>
+<div class="ui comments" id="ratings">
+  <% @show.ratings.each do |rating| %>
+    <div class="comment">
+      <div class="content">
+        <a class="author"><%= rating.username%></a>
+        <div class="metadata">
+          <div class="ui star rating disabled other-rating" data-rating=<%= rating.score.round %> data-max-rating="5"></div><%= rating.score %>
+        </div>
+        <div class="text"><%= rating.review %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
+<script>
+  $(document).ready(function(){
+    $('.other-rating').rating({interactive: false});
+    const show_id = <%= @show.id %>
+    const success = response => window.location = "<%= show_path(@show) %>"
+    const error = response => window.location = "<%= new_user_session_path %>"
+      <% if current_user && rating = @show.user_rating(current_user) %>
+        const http_verb = 'PUT'
+    const rating_id = <%= rating.id if rating %>
+    const url =`/api/v1/shows/${show_id}/ratings/${rating_id}`
+        <% else %>
+        const http_verb = 'POST'
+    const url =`/api/v1/shows/${show_id}/ratings`
+    <% end %>
+      const rating_func  = (value) => {
+        const data = { rating: { score: value } }
+        $.ajax({ type: http_verb, url, data, success, error });
+      }
+    $('#user-rating').rating({ onRate: rating_func });
+  });
+</script>

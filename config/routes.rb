@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :shows
+  resources :shows do
+    resources :ratings, shallow: true
+  end
 
   namespace :api do
     namespace :v1 do

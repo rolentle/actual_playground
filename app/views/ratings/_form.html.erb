@@ -1,0 +1,13 @@
+<%= form_for rating, url: { action: action }, html: { class: 'ui form' } do |f| %>
+  <div class='field'>
+    <%= f.label :score, 'My Rating' %>
+    <div class="ui star rating" id='user-rating' data-rating=<%= score %> data-max-rating="5"></div>
+    <%= f.hidden_field :score, value: score, id: 'rating-score' %>
+  </div>
+  <div class='field'>
+    <%= f.label :review, 'My Review (optional)' %>
+    <%= f.text_area :review, id: 'user-review' %>
+  </div>
+  <%= f.submit 'Submit' %>
+<% end %>
+<%= javascript_include_tag 'ratings_form' %>
