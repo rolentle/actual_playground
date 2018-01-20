@@ -23,4 +23,11 @@ feature 'user signs in' do
     expect(page).to_not have_text('Sign in')
     expect(page).to have_text(user.username)
   end
+
+  scenario 'logged-in user can sign out' do
+    login_as(user, scope: :user)
+
+    visit root_path
+    click_on('Sign out')
+  end
 end
