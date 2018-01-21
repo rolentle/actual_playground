@@ -30,6 +30,11 @@
   </h1>
   <div class="ui content">
     <p><%= @show.description %></p>
+    <% if @show.twitter_username %>
+<a href="http://www.twitter.com/<%= @show.twitter_username %>">
+      <i id="show-twitter" class="twitter icon link"></i>
+</a>
+    <% end %>
     <% if current_user && user_rating = @show.user_rating(current_user) %>
       <% if user_rating.review %>
         <div class="ui container">

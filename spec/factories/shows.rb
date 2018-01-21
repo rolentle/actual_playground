@@ -3,6 +3,7 @@ FactoryBot.define do
     title { Faker::Book.unique.title }
     description 'MyText'
     image { File.new("#{Rails.root}/spec/support/fixtures/image.jpg") }
+    twitter_username { Faker::Twitter.unique.screen_name }
 
     factory :show_with_ratings do
       after(:create) do |show|

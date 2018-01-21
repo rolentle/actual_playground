@@ -18,6 +18,11 @@ feature 'Show Details', js: true do
     end
   end
 
+  scenario 'show with twitter has twitter logo' do
+    show_with_twitter = create(:show, twitter_username: 'rpg_show')
+    visit show_path(show_with_twitter)
+    expect(find('#show-twitter')).to be_present
+  end
   context 'a non-logged-in user' do
     scenario 'tries to rate and gets redirected' do
       visit show_path(show)

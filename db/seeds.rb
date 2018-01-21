@@ -35,7 +35,8 @@ show_attributes = [
   {
     title: "The Adventure Zone",
     description: "Justin, Travis and Griffin McElroy from My Brother, My Brother and Me have recruited their dad Clint for a campaign of high adventure. Join the McElroys as they find their fortune and slay an unconscionable number of ... you know, kobolds or whatever in ... The Adventure Zone.",
-    scores: random_scores(20, prng1)
+    scores: random_scores(20, prng1),
+    twitter_username: 'TheZoneCast'
   },
   {
     title: "Friends at the Table",
@@ -54,7 +55,7 @@ show_attributes = [
   }
 ]
 shows = show_attributes.map do |show|
-  s = Show.create(title: show[:title], description: show[:description])
+  s = Show.create(title: show[:title], description: show[:description], twitter_username: show[:twitter_username])
   users = User.order("RANDOM()").limit(show[:scores].length)
   users.zip(show[:scores]).each do |(user, score)|
     s.ratings.create(user: user, score: score, review: Faker::Lorem.sentence(3))
