@@ -5,6 +5,7 @@ RSpec.describe Show, type: :model do
     good_show = create(:show_with_high_ratings, title: 'good')
     bad_show = create(:show_with_low_ratings, title: 'bad')
     show_with_no_ratings = create(:show, title: 'Not Found')
+    non_approved_show = create(:show, status: 'pending')
 
     actual_shows = Show.by_avg_scores
 
@@ -12,6 +13,7 @@ RSpec.describe Show, type: :model do
     expect(actual_shows.first).to eq(good_show)
     expect(actual_shows[1]).to eq(bad_show)
     expect(actual_shows.last).to eq(show_with_no_ratings)
+    expect(actual_shows).not_to include(non_approved_show)
   end
 
   scenario '#avg_rating' do
@@ -22,5 +24,17 @@ RSpec.describe Show, type: :model do
   scenario '#avg_rating without ratings' do
     show = create(:show)
     expect(show.avg_rating).to eq(nil)
+  end
+
+  context '#pending?' do
+    scenario 'when status is pending' do
+      show = create(:show, status: :pending)
+      expect(show.pending?).to eq(true)
+    end
+
+    scenario 'when status is approved' do
+      show = create(:show, status: :approved)
+      expect(show.pending?).to eq(false)
+    end
   end
 end

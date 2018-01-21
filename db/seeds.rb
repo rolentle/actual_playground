@@ -9,6 +9,7 @@ me = {
 User.create(first_name: "Rolen", last_name: "Le", email: "rolentle@gmail.com",
             password: "password",
             password_confirmation: "password",
+            superadmin: true
            ).tap do |user|
   user.confirmed_at = Time.now.utc
   user.save
@@ -55,7 +56,7 @@ show_attributes = [
   }
 ]
 shows = show_attributes.map do |show|
-  s = Show.create(title: show[:title], description: show[:description], twitter_username: show[:twitter_username])
+  s = Show.create(title: show[:title], description: show[:description], twitter_username: show[:twitter_username], status: 'approved', submitter: User.first)
   users = User.order("RANDOM()").limit(show[:scores].length)
   users.zip(show[:scores]).each do |(user, score)|
     s.ratings.create(user: user, score: score, review: Faker::Lorem.sentence(3))

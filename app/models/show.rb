@@ -1,5 +1,7 @@
 class Show < ApplicationRecord
+  enum status: { pending: 1, approved: 2 }
   has_many :ratings
+  belongs_to :submitter, class_name: 'User', foreign_key: 'user_id'
 
   has_attached_file :image, styles: {
     medium: '360x360>',
@@ -13,6 +15,7 @@ class Show < ApplicationRecord
     select("shows.*,
             count(ratings.id) as ratings_count,
            avg(ratings.score) as avg_rating")
+      .where(status: :approved)
       .left_outer_joins(:ratings)
       .group('shows.id')
       .order("count(ratings.id) desc,

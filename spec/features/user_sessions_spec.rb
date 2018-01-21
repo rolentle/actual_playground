@@ -25,7 +25,7 @@ feature 'user signs in' do
   end
 
   scenario 'logged-in user can sign out' do
-    login_as(user, scope: :user)
+    login_as user
 
     visit root_path
     click_on('Sign out')

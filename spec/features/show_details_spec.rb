@@ -43,7 +43,6 @@ feature 'Show Details', js: true do
 
     scenario 'rates' do
       visit show_path(show)
-
       expect(user_star_rating_score).to eq(nil)
       new_score = 3
       rate_show(new_score)
@@ -74,6 +73,38 @@ feature 'Show Details', js: true do
 
       click_on('Edit a review')
       expect(current_path).to eq(edit_rating_path(rating))
+    end
+  end
+
+  context 'where status is pending' do
+    let(:submitter) { create(:user) }
+    let(:show) { create(:show, status: :pending, submitter: submitter) }
+
+    context 'as the submitter' do
+      scenario 'I can visit the page' do
+        login_as submitter
+        visit show_path(show)
+
+        expect(current_path).to eq(show_path(show))
+        expect(page).to have_text('Your show is still pending review')
+      end
+    end
+
+    context 'as a non-logged-in user' do
+      scenario 'I get redirected to login' do
+        visit show_path(show)
+        expect(current_path).to eq(new_user_session_path)
+      end
+    end
+
+    context 'as a non-submitter user' do
+      let(:wrong_user) { create(:user) }
+
+      scenario 'I get redirect to root path' do
+        login_as wrong_user
+        visit show_path(show)
+        expect(current_path).to eq(root_path)
+      end
     end
   end
 end
