@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :shows do
     resources :ratings, shallow: true
   end
+  resources :performer_groups, only: [:show]
+  resources :performers, only: [:show]
 
   namespace :api do
     namespace :v1 do

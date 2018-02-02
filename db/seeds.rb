@@ -6,7 +6,7 @@ me = {
   last_name: "Le"
 }
 
-User.create(first_name: "Rolen", last_name: "Le", email: "rolentle@gmail.com",
+User.create!(first_name: "Rolen", last_name: "Le", email: "rolentle@gmail.com",
             password: "password",
             password_confirmation: "password",
             superadmin: true
@@ -16,7 +16,7 @@ User.create(first_name: "Rolen", last_name: "Le", email: "rolentle@gmail.com",
 end
 
 20.times do
-  User.create(
+  User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     password: "password",
@@ -32,33 +32,39 @@ def random_scores(number_of_reviews,random_generator)
   (1..number_of_reviews).to_a.map { |n| random_generator.rand(1..5) }
 end
 
+require './db/seeds/performer_performer_group_show'
+
 show_attributes = [
   {
     title: "The Adventure Zone",
     description: "Justin, Travis and Griffin McElroy from My Brother, My Brother and Me have recruited their dad Clint for a campaign of high adventure. Join the McElroys as they find their fortune and slay an unconscionable number of ... you know, kobolds or whatever in ... The Adventure Zone.",
     scores: random_scores(20, prng1),
-    twitter_username: 'TheZoneCast'
+    twitter_username: 'TheZoneCast',
+    creator: PerformerGroup.create!(name: 'The McElorys')
   },
   {
     title: "Friends at the Table",
     description: "Friends at the Table is an actual play podcast about critical worldbuilding, smart characterization, and fun interaction between good friends. Find us (and a listener guide) @Friends_Table on Twitter.",
-    scores: random_scores(15, prng1)
+    scores: random_scores(15, prng1),
+    creator: PerformerGroup.create!(name: 'Friends at the Table')
   },
   {
     title: "Spout Lore",
     description: "A series of comedy bits, loosely connected by dice rolls. Join a well-meaning barbarian, a mysterious druid, and an orphaned halfling child as they try to figure out the world they're in.",
-    scores: random_scores(7, prng1)
+    scores: random_scores(7, prng1),
+    creator: PerformerGroup.create!(name: 'Spout Lore')
   },
   {
     title: "Party of One Podcast",
     description: "An RPG Podcast where the gaming table is set for two. GM Jeff Stormer sits down with friends and guests to play tabletop RPGs one-on-one to see what happens when adventurers leave the party behind and strike out on their own.",
-    scores: []
+    scores: [],
+    creator: Performer.create!(name: 'Jeff Stormer')
   }
 ]
 shows = show_attributes.map do |show|
-  s = Show.create(title: show[:title], description: show[:description], twitter_username: show[:twitter_username], status: 'approved', submitter: User.first)
-  users = User.order("RANDOM()").limit(show[:scores].length)
+  s = Show.create!(title: show[:title], description: show[:description], twitter_username: show[:twitter_username], status: 'approved', submitter: User.first, creator: show[:creator])
+  users = User.order("RANDOM()").limit(show[:scores].length, )
   users.zip(show[:scores]).each do |(user, score)|
-    s.ratings.create(user: user, score: score, review: Faker::Lorem.sentence(3))
+    s.ratings.create!(user: user, score: score, review: Faker::Lorem.sentence(3))
   end
 end

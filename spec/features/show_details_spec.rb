@@ -9,6 +9,7 @@ feature 'Show Details', js: true do
     expect(page).to have_text(show.title)
     expect(page).to have_text(show.description)
     expect(page).to have_text(show.avg_rating)
+    expect(page).to have_text(show.creator_name)
 
     image_xpath = "//img[@src='#{show.image_url}']"
     expect(page).to have_xpath(image_xpath)
@@ -16,6 +17,9 @@ feature 'Show Details', js: true do
     show.ratings.each do |rating|
       expect(page).to have_text(rating.review)
     end
+
+    click_on(show.creator_name)
+    expect(current_path).to eq performer_group_path(show.creator)
   end
 
   scenario 'show with twitter has twitter logo' do

@@ -2,7 +2,7 @@
   <h1 class="ui header">
     <%= image_tag @show.image_url %>
     <div class="content">
-      <%= @show.title %>
+      <%= @show.title %> created by: <%= link_to @show.creator_name, @show.creator %>
       <div class="sub header">
         <% if current_user && user_rating = @show.user_rating(current_user) %>
           <div class="ui label">

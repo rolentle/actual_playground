@@ -6,6 +6,7 @@ FactoryBot.define do
     twitter_username { Faker::Twitter.unique.screen_name }
     status 'approved'
     submitter factory: :user
+    creator factory: :performer_group
 
     factory :show_with_ratings do
       after(:create) do |show|
@@ -30,6 +31,14 @@ FactoryBot.define do
       after(:create) do |show|
         create_list :rating, 2, show: show, score: 1
       end
+    end
+
+    factory :show_created_by_a_performer do
+      creator factory: :performer
+    end
+
+    factory :show_created_by_a_performer_group do
+      creator factory: :performer_group
     end
   end
 end

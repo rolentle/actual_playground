@@ -5,5 +5,14 @@
   <%= f.text_field :twitter_username %>
   <%= f.label :description %>
   <%= f.text_area :description %>
+  <%= fields_for :creator, @show.creator do |creator_fields| %>
+    <%= creator_fields.label :name, 'Creator' %>
+    <%= creator_fields.text_field :name %>
+  <% end %>
+    <%= f.label :creator_type %>
+    <%= f.label :creator_type, 'Group/Network' %>
+    <%= f.radio_button :creator_type,'PerformerGroup' %>
+    <%= f.label :creator_type, 'Individual' %>
+    <%= f.radio_button :creator_type, 'Performer' %>
   <%= f.submit 'Submit' %>
 <% end %>

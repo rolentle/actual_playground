@@ -37,4 +37,23 @@ RSpec.describe Show, type: :model do
       expect(show.pending?).to eq(false)
     end
   end
+
+  context '#creator_name' do
+    context 'creator is a performer' do
+      scenario "it is the performer's name" do
+        expected_name = 'foo'
+        performer = create(:performer, name: expected_name)
+        show = create(:show_created_by_a_performer, creator: performer)
+        expect(show.creator_name).to eq(expected_name)
+      end
+    end
+    context 'creator is a performer group' do
+      scenario "it is the performer group's name" do
+        expected_name = 'foo'
+        performer_group = create(:performer_group, name: expected_name)
+        show = create(:show_created_by_a_performer_group, creator: performer_group)
+        expect(show.creator_name).to eq(expected_name)
+      end
+    end
+  end
 end

@@ -2,6 +2,7 @@ class Show < ApplicationRecord
   enum status: { pending: 1, approved: 2 }
   has_many :ratings
   belongs_to :submitter, class_name: 'User', foreign_key: 'user_id'
+  belongs_to :creator, polymorphic: true
 
   has_attached_file :image, styles: {
     medium: '360x360>',
@@ -28,5 +29,9 @@ class Show < ApplicationRecord
 
   def user_rating(user)
     ratings.find_by(user: user)
+  end
+
+  def creator_name
+    creator.name
   end
 end

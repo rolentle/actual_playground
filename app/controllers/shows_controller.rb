@@ -10,7 +10,9 @@ class ShowsController < ApplicationController
   end
 
   def create
-    @show = Show.create(show_params)
+    creator = show_params[:creator_type].constantize.create!(show_params[:creator])
+    create_show_params = show_params.merge(status: 1, submitter: current_user, creator: creator)
+    @show = Show.create!(create_show_params)
     flash[:notice] = 'Thank you for submitting your show, we will notify you once it has been approved'
     redirect_to shows_path
   end
@@ -40,6 +42,6 @@ class ShowsController < ApplicationController
   private
 
   def show_params
-    params.require(:show).permit(:title, :twitter_username, :description)
+    params.require(:show).permit(:title, :twitter_username, :description, { creator: [:name] }, :creator_type)
   end
 end

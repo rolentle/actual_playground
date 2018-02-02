@@ -1,0 +1,8 @@
+<h1><%= @performer_group.name %></h1>
+<% @performer_group.shows.each do |show| %>
+<%= link_to show.title, show %>
+<% end %>
+
+<% @performer_group.performers.each do |performer| %>
+<%= link_to performer.name, performer %>
+<% end %>

@@ -15,6 +15,9 @@ feature 'Submit a Show' do
     fill_in('Title', with: 'The Oracle Awakens')
     fill_in('Description', with: 'Kyvo, Hawthorn, Wysteria, and Uri')
     fill_in('Twitter username', with: 'OracleCast')
+    fill_in('Creator', with: 'Strangers on The Internet')
+    performer_group_selection_id = 'show_creator_type_performergroup'
+    choose(performer_group_selection_id)
     click_on('Submit')
 
     expect(current_path).to eq(shows_path)
