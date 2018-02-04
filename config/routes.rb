@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resource :rss_feed_converter, only: [:create]
       resources :shows, only: [:index, :show] do
         resources :ratings, only: [:create, :update, :destroy]
       end

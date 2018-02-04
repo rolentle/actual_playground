@@ -14,5 +14,12 @@
     <%= f.radio_button :creator_type,'PerformerGroup' %>
     <%= f.label :creator_type, 'Individual' %>
     <%= f.radio_button :creator_type, 'Performer' %>
+  <%= fields_for :rss_reader do |rss_fields| %>
+    <%= rss_fields.label :rss_feed, 'RSS Feed' %>
+    <%= rss_fields.text_field :rss_feed, id: 'rss_feed' %>
+    <%= rss_fields.button 'Upload', id: 'rss_upload' %>
+  <% end %>
   <%= f.submit 'Submit' %>
 <% end %>
+<ul id="stories"></ul>
+<%= javascript_include_tag 'show_form' %>

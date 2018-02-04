@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Submit a Show' do
+feature 'Submit a Show', js: true do
   scenario 'As a non-logged-in user' do
     visit new_show_path
     expect(current_path).to eq(new_user_session_path)
@@ -18,6 +18,10 @@ feature 'Submit a Show' do
     fill_in('Creator', with: 'Strangers on The Internet')
     performer_group_selection_id = 'show_creator_type_performergroup'
     choose(performer_group_selection_id)
+    fill_in('rss_feed', with: 'https://pinecast.com/feed/protean-city-comics')
+    click_on('Upload')
+
+    expect(all('.episode').count).to eq(26)
     click_on('Submit')
 
     expect(current_path).to eq(shows_path)
