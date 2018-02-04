@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202231115) do
+ActiveRecord::Schema.define(version: 20180204025032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,28 @@ ActiveRecord::Schema.define(version: 20180202231115) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "campaigns", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "episodes", force: :cascade do |t|
+    t.string "title"
+    t.bigint "campaign_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_episodes_on_campaign_id"
+  end
+
+  create_table "epsiodes", force: :cascade do |t|
+    t.string "title"
+    t.bigint "campaign_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_epsiodes_on_campaign_id"
   end
 
   create_table "performer_groups", force: :cascade do |t|
@@ -96,6 +118,16 @@ ActiveRecord::Schema.define(version: 20180202231115) do
     t.index ["user_id"], name: "index_shows_on_user_id"
   end
 
+  create_table "stories", force: :cascade do |t|
+    t.bigint "show_id"
+    t.string "storyable_type"
+    t.bigint "storyable_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["show_id"], name: "index_stories_on_show_id"
+    t.index ["storyable_type", "storyable_id"], name: "index_stories_on_storyable_type_and_storyable_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -121,9 +153,12 @@ ActiveRecord::Schema.define(version: 20180202231115) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "episodes", "campaigns"
+  add_foreign_key "epsiodes", "campaigns"
   add_foreign_key "performer_groups_performers", "performer_groups"
   add_foreign_key "performer_groups_performers", "performers"
   add_foreign_key "ratings", "shows"
   add_foreign_key "ratings", "users"
   add_foreign_key "shows", "users"
+  add_foreign_key "stories", "shows"
 end

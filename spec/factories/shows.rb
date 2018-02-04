@@ -8,6 +8,7 @@ FactoryBot.define do
     submitter factory: :user
     creator factory: :performer_group
 
+
     factory :show_with_ratings do
       after(:create) do |show|
         create_list :rating, 2, show: show
@@ -39,6 +40,16 @@ FactoryBot.define do
 
     factory :show_created_by_a_performer_group do
       creator factory: :performer_group
+    end
+
+    factory :protean_city_comics do
+      title "Protean City Comics"
+      description "Protean City Comics is a weekly actual play podcast in the Masks: A New Generation game. It follows the lives of teenage super heroes in Protean City as they battle villains, seek to establish themselves as heroes, and struggle to find what kind of person they want to be."
+      twitter_username "ProteanCity"
+      creator { create(:performer_group, name: "SHR Network") }
+      after(:create) do |show|
+        create_list :rating, 2, show: show, score: 5
+      end
     end
   end
 end

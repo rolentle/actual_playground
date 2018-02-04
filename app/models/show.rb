@@ -3,6 +3,7 @@ class Show < ApplicationRecord
   has_many :ratings
   belongs_to :submitter, class_name: 'User', foreign_key: 'user_id'
   belongs_to :creator, polymorphic: true
+  has_many :stories
 
   has_attached_file :image, styles: {
     medium: '360x360>',
@@ -33,5 +34,9 @@ class Show < ApplicationRecord
 
   def creator_name
     creator.name
+  end
+
+  def stories
+    super.map(&:storyable)
   end
 end

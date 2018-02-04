@@ -27,12 +27,12 @@ RSpec.describe Show, type: :model do
   end
 
   context '#pending?' do
-    scenario 'when status is pending' do
+    it 'is true when status is pending' do
       show = create(:show, status: :pending)
       expect(show.pending?).to eq(true)
     end
 
-    scenario 'when status is approved' do
+    it 'is fale when status is approved' do
       show = create(:show, status: :approved)
       expect(show.pending?).to eq(false)
     end
@@ -40,7 +40,7 @@ RSpec.describe Show, type: :model do
 
   context '#creator_name' do
     context 'creator is a performer' do
-      scenario "it is the performer's name" do
+      it "is the performer's name" do
         expected_name = 'foo'
         performer = create(:performer, name: expected_name)
         show = create(:show_created_by_a_performer, creator: performer)
@@ -48,11 +48,25 @@ RSpec.describe Show, type: :model do
       end
     end
     context 'creator is a performer group' do
-      scenario "it is the performer group's name" do
+      it "is the performer group's name" do
         expected_name = 'foo'
         performer_group = create(:performer_group, name: expected_name)
         show = create(:show_created_by_a_performer_group, creator: performer_group)
         expect(show.creator_name).to eq(expected_name)
+      end
+    end
+  end
+
+  context '#stories' do
+    context 'it has episodes and campaigns' do
+      it 'rerurns them both' do
+        episode = create(:episode)
+        campaign = create(:campaign)
+        show = create(:show)
+        episode_story = create(:story, show: show, storyable: episode)
+        campaign_story = create(:story, show: show,  storyable: campaign)
+        expect(show.stories).to include(episode)
+        expect(show.stories).to include(campaign)
       end
     end
   end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'Show Details', js: true do
-  let(:show) { create(:show_with_high_ratings) }
+  let(:show) { create(:protean_city_comics) }
 
   scenario 'has title, description, and image' do
     visit show_path(show)
@@ -16,6 +16,10 @@ feature 'Show Details', js: true do
 
     show.ratings.each do |rating|
       expect(page).to have_text(rating.review)
+    end
+
+    show.stories.each do |story|
+      expect(page).to have_text(story.title)
     end
 
     click_on(show.creator_name)
