@@ -1,7 +1,7 @@
 class Api::V1::RssFeedConvertersController < ApplicationController
   before_action :authenticate_user!
   def create
-    render json: Array.new(26) { { title: Faker::Book.unique.title } }
+    render json: RssFeedConverter.execute(rss_feed_converter_params[:url]).episodes, each_serializer: RssFeedEpisodeSerializer
   end
 
   private

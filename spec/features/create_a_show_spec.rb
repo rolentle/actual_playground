@@ -18,8 +18,10 @@ feature 'Submit a Show', js: true do
     fill_in('Creator', with: 'Strangers on The Internet')
     performer_group_selection_id = 'show_creator_type_performergroup'
     choose(performer_group_selection_id)
-    fill_in('rss_feed', with: 'https://pinecast.com/feed/protean-city-comics')
-    click_on('Upload')
+    VCR.use_cassette('protean_city') do
+      fill_in('rss_feed', with: 'https://pinecast.com/feed/protean-city-comics')
+      click_on('Upload')
+    end
 
     expect(all('.episode').count).to eq(26)
     click_on('Submit')

@@ -1,0 +1,449 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pinecast.com/feed/protean-city-comics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 06 Feb 2018 02:03:54 GMT
+      Content-Type:
+      - application/rss+xml; charset=utf-8
+      Content-Length:
+      - '7604'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d4b3c3ea47d5f20a8b34390cf82205b2e1517882634; expires=Wed, 06-Feb-19
+        02:03:54 GMT; path=/; domain=.pinecast.com; HttpOnly
+      Etag:
+      - W/"2018-01-31T08:00:53"
+      Last-Modified:
+      - Wed, 31 Jan 2018 08:00:53 -0000
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - GET
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      Via:
+      - 1.1 vegur
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 3e8a8921fe639f29-IAD
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:atom="http://www.w3.org/2005/Atom"
+             xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             version="2.0">
+        <channel>
+        <title>Protean City Comics</title>
+        <link>https://www.ProteanCity.com</link>
+        <atom:link href="https://pinecast.com/feed/protean-city-comics" rel="self" type="application/rss+xml" />
+        <generator>Pinecast (https://pinecast.com)</generator>
+        <language>en-US</language>
+        <copyright>Attribution-NonCommercial-ShareAlike 4.0 International</copyright>
+        <itunes:subtitle>Thrilling Tales of Adventure and High School Angst</itunes:subtitle>
+        <itunes:author>SHR Network</itunes:author>
+        <description><![CDATA[Protean City Comics is a weekly actual play podcast in the Masks: A New Generation game. It follows the lives of teenage super heroes in Protean City as they battle villains, seek to establish themselves as heroes, and struggle to find what kind of person they want to be.]]></description>
+        <itunes:owner>
+        <itunes:name>SHR Network</itunes:name>
+        <itunes:email>james@stophackandroll.com</itunes:email>
+        </itunes:owner>
+        <itunes:explicit>yes</itunes:explicit>
+        <itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" />
+        <image>
+        <title>Protean City Comics</title>
+        <link>https://www.ProteanCity.com</link>
+        <url>https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png</url>
+        </image>
+        <itunes:category text="Games &amp; Hobbies"><itunes:category text="Hobbies" />
+        <itunes:category text="Other Games" /></itunes:category>
+        <itunes:category text="Arts"><itunes:category text="Performing Arts" /></itunes:category>
+        <item><title>Volume 6 Issue 3 - Click...BOOM</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this, the last of of three issues in Volume 6 Blinded by Science we may finally get answers to our questions? What caused Kraken to attack? Who is this strange new villain? Will any of our heroes be able to make ironic finger guns ever again?  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/4557dffd-869e-43d2-8319-900a2595e91c</link><guid isPermaLink="false">https://pinecast.com/guid/4557dffd-869e-43d2-8319-900a2595e91c</guid><pubDate>Wed, 31 Jan 2018 08:00:53 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 3...Click...BOOM</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:53:32</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/88bc0851-a18b-43b9-8364-34dc94772e2d/Volume_6_Issue_3_FINAL.mp3?x-source=rss&amp;x-episode=4557dffd-869e-43d2-8319-900a2595e91c" length="51411768" type="audio/mp3" />
+        </item>
+        <item><title>Volume 6 Issue 2 - Lets Get Kraken</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is issue 2 of 3 "Lets Get Kraken" for Volume 6 Blinded by Science. When we last left our heroes they had been enjoying a nice day at the Protean City University Science Expo before being tossed around by Kraken! Can these heroes wring themselves out and drive off the enemy or will they be washed away?  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/731f62fe-963f-4d83-8c3b-3be5c9a2b3ad</link><guid isPermaLink="false">https://pinecast.com/guid/731f62fe-963f-4d83-8c3b-3be5c9a2b3ad</guid><pubDate>Wed, 24 Jan 2018 08:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 - Lets Get Kraken</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:56:40</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/cbe849d0-ffbe-4552-a2ff-af6a5d2b5813/Volume_6_Issue_2_FINAL.mp3?x-source=rss&amp;x-episode=731f62fe-963f-4d83-8c3b-3be5c9a2b3ad" length="54410870" type="audio/mp3" />
+        </item>
+        <item><title>Volume 6 Issue 1 - Time In a Bottle</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is the 1st of 3 issues in Volume 6: Blinded by Science. What starts as a simple trip to the Protean City University Science Expo for Kalino, John, and Alina quickly becomes something more interesting, and more deadly. What new dangers await, IN SCIENCE!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/0ef49bab-a715-462b-ae65-b5f4403e3505</link><guid isPermaLink="false">https://pinecast.com/guid/0ef49bab-a715-462b-ae65-b5f4403e3505</guid><pubDate>Wed, 17 Jan 2018 08:00:12 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1 - Time In a Bottle</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:58:27</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/756ba2aa-c527-4322-9b1b-c4ac7817ad3a/Volume_6_Issue_1_FINAL.mp3?x-source=rss&amp;x-episode=0ef49bab-a715-462b-ae65-b5f4403e3505" length="56124321" type="audio/mp3" />
+        </item>
+        <item><title>Volume 5 Issue 2 - Bunker Down</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is the second and last issue of Volume 5: Three Capes and a Baby. When we last left our heroes they had finally reconnected with the girl they were tasked to protect when terrible villains arrived over Protean City. Can the team keep Claire safe?!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/8378296a-2e3d-4dfc-a279-17208c5202c0</link><guid isPermaLink="false">https://pinecast.com/guid/8378296a-2e3d-4dfc-a279-17208c5202c0</guid><pubDate>Wed, 10 Jan 2018 13:00:48 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 Bunker Down</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>01:08:54</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/b246b9a8-0c60-4021-9c83-e85e7aa6f0f2/Volume_5_Issue_2_FINAL.mp3?x-source=rss&amp;x-episode=8378296a-2e3d-4dfc-a279-17208c5202c0" length="66156497" type="audio/mp3" />
+        </item>
+        <item><title>Volume 5 Issue 1 - Babysitter's Club</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is Issue 1 of 2 for Volume 5: Three Capes and a Baby. In which our heroes are given the important task of watching a visiting Mayor's young daughter and entertaining her. Are they up to the task? Is there a sinister plan brewing in the background? Find out in this issue of Protean City Comics!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/787a1c88-b2d4-4334-bdac-4299522abec4</link><guid isPermaLink="false">https://pinecast.com/guid/787a1c88-b2d4-4334-bdac-4299522abec4</guid><pubDate>Wed, 03 Jan 2018 13:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1: Babysitter's Club</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:52:21</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/a0aec17c-176f-4606-b647-1e5f28eec664/Volume_5_Issue_1_Final.mp3?x-source=rss&amp;x-episode=787a1c88-b2d4-4334-bdac-4299522abec4" length="50272564" type="audio/mp3" />
+        </item>
+        <item><title>Volume 4.5 Bonus Issue 1</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>With the successful completion of our Valentine's Day Voting Goal, this is a bonus limited edition run that shows behind the scenes at Protean City Comics. Brandon, Pippin, and a dark mysterious shape looming in the background ring in the new year with answers to reader questions.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/32af1c81-03e5-45ca-88d8-9752cd7a6a25</link><guid isPermaLink="false">https://pinecast.com/guid/32af1c81-03e5-45ca-88d8-9752cd7a6a25</guid><pubDate>Mon, 01 Jan 2018 17:36:22 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Bonus Issue 1</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:42:51</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/40258da0-67ea-4577-b97d-fd97f2c5dc39/Volume_4.5_BONUS.mp3?x-source=rss&amp;x-episode=32af1c81-03e5-45ca-88d8-9752cd7a6a25" length="41141493" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 4 Issue 3 - No Creature Was Stirring</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is the third and final issue of the fourth volume. Will Windshear continue to rage out of control? Will the team every find a moment to exchange gifts? Find out in the last issue of 2017.  </p>
+        <p>Vote for our February Romance Special here: tinyurl.com/proteancityromance  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/9986177f-cf2b-4c0b-8199-81c1f3461b99</link><guid isPermaLink="false">https://pinecast.com/guid/9986177f-cf2b-4c0b-8199-81c1f3461b99</guid><pubDate>Wed, 20 Dec 2017 13:00:35 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 3 - No Creature Was Stirring</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>01:02:15</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/ffd2f55d-b1d9-4a1b-9634-ebc3bb100652/Volume_4_Issue_3_FINAL.mp3?x-source=rss&amp;x-episode=9986177f-cf2b-4c0b-8199-81c1f3461b99" length="59771423" type="audio/mp3" />
+        </item>
+        <item><title>Volume 4 Issue 2 - Holiday Blues</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is issue two of three for Volume 4 Holidazed. Who are these strange intruders? What do they want? Did our heroes get each other holiday gifts? Will anyone remember that Sohcahtoa is covered in rats?!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/1a5afee2-22f9-4fbf-acda-48bd5c6e2a8e</link><guid isPermaLink="false">https://pinecast.com/guid/1a5afee2-22f9-4fbf-acda-48bd5c6e2a8e</guid><pubDate>Wed, 13 Dec 2017 13:00:06 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 - Holiday Blues</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>01:05:05</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/01a8f8a7-847d-44aa-9c22-ebd0c428b5e7/Volume_4_Issue_2_FINAL.mp3?x-source=rss&amp;x-episode=1a5afee2-22f9-4fbf-acda-48bd5c6e2a8e" length="62489824" type="audio/mp3" />
+        </item>
+        <item><title>Volume 4 Issue 1 - A Snowball's Chance</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>This is issue one of three for Volume 4 Holidazed. Whether you're being wrangled into a charity event or seeing snow for the first time, winter in Protean City is a special time. We sure hope nothing ruins this peaceful day off.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/69aefd38-c2dc-4015-ae99-2ffb3801e98e</link><guid isPermaLink="false">https://pinecast.com/guid/69aefd38-c2dc-4015-ae99-2ffb3801e98e</guid><pubDate>Wed, 06 Dec 2017 13:00:54 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1 - A Snowball's Chance</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>01:00:00</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/3f75fb0e-2788-45be-9942-abc8c9133d75/Volume_4_Issue_1_FINAL.mp3?x-source=rss&amp;x-episode=69aefd38-c2dc-4015-ae99-2ffb3801e98e" length="57608460" type="audio/mp3" />
+        </item>
+        <item><title>Volume 3 Issue 4 - Effective Immediately</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p><em>This is the corrected version of the episode. The previous version was missing the introduction. We apologize for the confusion.</em></p>
+        <p>In this final issue of Volume 3 Bird of a Feather the boys and the young Striped Eagle face off together against a dangerous foe. Can they work with F.A.L.C.O.N. and be an effective team?  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/083729e9-283e-4c3a-9d07-108a959526e4</link><guid isPermaLink="false">https://pinecast.com/guid/083729e9-283e-4c3a-9d07-108a959526e4</guid><pubDate>Thu, 30 Nov 2017 03:50:02 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 4 - Effective Immediately</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:48:56</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/82c9606d-4b64-4b61-b409-31653ef467ae/Volume_3_Issue_4_FINAL_FIXED.mp3?x-source=rss&amp;x-episode=083729e9-283e-4c3a-9d07-108a959526e4" length="46984529" type="audio/mp3" />
+        </item>
+        <item><title>Volume 3 Issue 4 - Effective Immediately</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p><em>This episode was originally released with an incorrect audio file. It has been updated now.</em></p>
+        <p>In this final issue of Volume 3 Bird of a Feather the boys and the young Striped Eagle face off together against a dangerous foe. Can they work with F.A.L.C.O.N. and be an effective team?  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/b2f2d893-9f58-486f-9a5a-f01691cb1a36</link><guid isPermaLink="false">https://pinecast.com/guid/b2f2d893-9f58-486f-9a5a-f01691cb1a36</guid><pubDate>Wed, 29 Nov 2017 13:00:13 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 4 - Effective Immediately</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:48:56</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/bd6eb55b-0935-415a-ab92-8ed597d79e26/Volume_3_Issue_4_FINAL_FIXED.mp3?x-source=rss&amp;x-episode=b2f2d893-9f58-486f-9a5a-f01691cb1a36" length="46984529" type="audio/mp3" />
+        </item>
+        <item><title>Volume 3 Issue 3 - Flock Together</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this the third issue of Volume Three, Bird of a Feather the boys head home and spend time with their families. Their adventure is not over as one of the party receives a phone call from a recent aquaintance.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/c84726d2-ba39-4b2a-8ef1-b720beeec40e</link><guid isPermaLink="false">https://pinecast.com/guid/c84726d2-ba39-4b2a-8ef1-b720beeec40e</guid><pubDate>Wed, 22 Nov 2017 13:00:09 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 3 - Flock Together</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:53:17</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/c2095e05-8b0d-4c0a-b95a-2bcdcd21a96b/Volume_3_Issue_3_FINAL.mp3?x-source=rss&amp;x-episode=c84726d2-ba39-4b2a-8ef1-b720beeec40e" length="51164106" type="audio/mp3" />
+        </item>
+        <item><title>Volume 3 Issue 2 - A Second Chance</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>Who is this Jack Chance person. Can Frequency and Sohcahtoa defeat Devilis without Puck? Will the boys embarass themselves in front of Centurion and this new young hero? Find out in this issue of Protean City Comics!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/b52e41ee-2273-41dc-a458-3ad2283d7a65</link><guid isPermaLink="false">https://pinecast.com/guid/b52e41ee-2273-41dc-a458-3ad2283d7a65</guid><pubDate>Wed, 15 Nov 2017 13:00:18 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 - A Second Chance</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:49:08</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/fa3b2adf-ac2c-4a24-acad-81313c79717c/Volume_3_Issue_2_FINAL.mp3?x-source=rss&amp;x-episode=b52e41ee-2273-41dc-a458-3ad2283d7a65" length="47173835" type="audio/mp3" />
+        </item>
+        <item><title>Volume 3 Issue 1 - Devilis in the Details</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>Time for the team to put in their community service. What could possibly go wrong when Puck, Sohcahtoa, and Frequency spend time cleaning up the boardwalk? They wouldn't go charging into combat without a plan again would they!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/cfe6a13a-6141-4276-9e9e-36926e1bcd4d</link><guid isPermaLink="false">https://pinecast.com/guid/cfe6a13a-6141-4276-9e9e-36926e1bcd4d</guid><pubDate>Wed, 08 Nov 2017 13:00:11 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1 - Devilis in the Details</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:56:30</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/08534d0d-07a1-4292-b562-9df615f7b7b8/Volume_3_Issue_1_FINAL.mp3?x-source=rss&amp;x-episode=cfe6a13a-6141-4276-9e9e-36926e1bcd4d" length="54250909" type="audio/mp3" />
+        </item>
+        <item><title>Volume 2 Issue 2 - Fractured Hearts Twisted Claws</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this second issue of Volume 2 Hollow Eves, we ask the question "Who is this Arcana person" and hopefully get an answer. Will our heroes save this broken world and get their friends home safe? Read on and fight out!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/ec9fac2c-5292-4c4c-b63a-ec915ab087d9</link><guid isPermaLink="false">https://pinecast.com/guid/ec9fac2c-5292-4c4c-b63a-ec915ab087d9</guid><pubDate>Wed, 01 Nov 2017 12:00:56 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 - Fractured Hearts Twisted Claws</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>01:06:56</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/14616469-3989-4364-a99b-21bccec2b4b3/Volume_2_Issue_2_FINAL_Fixed.mp3?x-source=rss&amp;x-episode=ec9fac2c-5292-4c4c-b63a-ec915ab087d9" length="64270219" type="audio/mp3" />
+        </item>
+        <item><title>Volume 2 Issue 1 - Let's Ghost</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this first issue of Volume 2 Hollow Eves the ladies of our heroic team attend the most terrifying event possible...a high school party. Will they drink alcohol underage? Be tempted by drugs? Will they be lured by cute boys into a dark basement to play the a demonic board game? Read on and find out.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/777b12b4-3849-4401-80da-e9ab67a8ffc1</link><guid isPermaLink="false">https://pinecast.com/guid/777b12b4-3849-4401-80da-e9ab67a8ffc1</guid><pubDate>Wed, 25 Oct 2017 12:00:33 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1 - Let's Ghost</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:59:10</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/ca66c704-d3fb-4ceb-829e-1eb912eacd19/Volume_2_Issue_1_FINAL.mp3?x-source=rss&amp;x-episode=777b12b4-3849-4401-80da-e9ab67a8ffc1" length="56809049" type="audio/mp3" />
+        </item>
+        <item><title>Volume 1 Issue 3 - Runaway Runway</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this third issue of Volume 1 Fashion Disaster, will the team be able to halt the metaphorical steam train of momentum the Steam Society has gained? Will the team be able to half the literal momentum of the Steam Society's literal steam train? Find out in the thrilling conclusion of Volume One.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/10c4fab8-0f26-4acd-9410-189e5b27958d</link><guid isPermaLink="false">https://pinecast.com/guid/10c4fab8-0f26-4acd-9410-189e5b27958d</guid><pubDate>Wed, 18 Oct 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 3 - Runaway Runway</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:44:44</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/1f6bc17b-ce9b-4c59-9716-746fb03389e5/Volume_1_Issue_3_FINAL.mp3?x-source=rss&amp;x-episode=10c4fab8-0f26-4acd-9410-189e5b27958d" length="42950922" type="audio/mp3" />
+        </item>
+        <item><title>Volume 1 Issue 2 - So Last Season</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this second issue of Volume 1 Fashion Disaster, ticking drives the plot forward. Will Puck, Alina, and Penance get out of the room alive? Will Frequency and Sohcahtoa find the right tune for sneaking? Find out in this issue of Protean City Comics!  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/913b4dd1-90d5-4d4e-b9c3-06449c65ce7a</link><guid isPermaLink="false">https://pinecast.com/guid/913b4dd1-90d5-4d4e-b9c3-06449c65ce7a</guid><pubDate>Wed, 11 Oct 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 2 - So Last Season</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:50:01</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/8e76afff-aa74-42ec-9063-727102a4152a/Volume_1_Issue_2_FINAL.mp3?x-source=rss&amp;x-episode=913b4dd1-90d5-4d4e-b9c3-06449c65ce7a" length="48030351" type="audio/mp3" />
+        </item>
+        <item><title>Volume 1 Issue 1 - Backstage Passes</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In this first issue of the Volume 1 Fashion Disaster, Alina gets a tip from her mentor that trouble might be brewing at the big fashion show this evening. Can the team sneak in and figure out what sinister plot is afoot without being distrated by supermodels?  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/2720f84e-dfae-4a5d-b4e1-9ad6547ce5d0</link><guid isPermaLink="false">https://pinecast.com/guid/2720f84e-dfae-4a5d-b4e1-9ad6547ce5d0</guid><pubDate>Wed, 04 Oct 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Issue 1 - Backstage Passes</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:41:00</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/06b73e6f-4954-46d2-8e88-f13f9d30edb1/Volume_1_Issue_1_FINAL.mp3?x-source=rss&amp;x-episode=2720f84e-dfae-4a5d-b4e1-9ad6547ce5d0" length="39371793" type="audio/mp3" />
+        </item>
+        <item><title>Volume 0 - How the Team Came Together</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>All stories have a beginning and this one is ours. You've met some of the heroes of our story, now learn how they met each other.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/bd9fd0ac-b58b-4b35-a953-762f19f5dfd8</link><guid isPermaLink="false">https://pinecast.com/guid/bd9fd0ac-b58b-4b35-a953-762f19f5dfd8</guid><pubDate>Mon, 02 Oct 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>How the Team Came Together</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:30:42</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/12efa394-d887-44bc-888d-79727465e5ee/PCC_Volume_0_Special_How_The_Team_Came_Together.mp3?x-source=rss&amp;x-episode=bd9fd0ac-b58b-4b35-a953-762f19f5dfd8" length="29491790" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Hero File: Alina Mars</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In today's special Hero File episode we pierce the mask of the unnamed hero Alina Mars. Will she master  her telekinetic powers? Who is her shadowy benefactor? Will she ever choose a hero pseudonym?  </p>
+        <p>Alina Mars, the Protege is played by Jess Bonini  </p>
+        <hr>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/fc19448e-8868-4b66-80d7-4848744dca2b</link><guid isPermaLink="false">https://pinecast.com/guid/fc19448e-8868-4b66-80d7-4848744dca2b</guid><pubDate>Fri, 29 Sep 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Hero File: Alina Mars</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:12:54</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/af3cc783-9b93-41c6-a5d8-045db3770c07/PCC_Volume_0_Special_Hero_File_Alina_Mars.mp3?x-source=rss&amp;x-episode=fc19448e-8868-4b66-80d7-4848744dca2b" length="12403204" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Hero Files: Frequency</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In today's special Hero File episode we pierce the mask of the hero Frequency. Will he ever put on his school uniform? Can he see this podcast RSS Feed? Will this orphan troublemaker find a home on our hero team?  </p>
+        <p>Frequency, the Delinquent is played by Rob Harvey.  </p>
+        <hr>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/0e5e3599-b814-488b-aceb-ed1f12f3c8be</link><guid isPermaLink="false">https://pinecast.com/guid/0e5e3599-b814-488b-aceb-ed1f12f3c8be</guid><pubDate>Thu, 28 Sep 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Hero Files: Frequency</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:08:02</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/3c1ecdef-cfc1-4f67-aa70-274ff695d9eb/PCC_Volume_0_Special_Hero_File_Frequency.mp3?x-source=rss&amp;x-episode=0e5e3599-b814-488b-aceb-ed1f12f3c8be" length="11578655" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Hero File: Sohcahtoa</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In today's special Hero File episode we pierce the mask of the hero Sohcahtoa. Will his joyful approach to the world win you over? Can you fight crime with math puns alone? Could anyone possibly be more excited to be here?  </p>
+        <p>Sohcahtoa, the Beacon is played by Mark Zurek.  </p>
+        <hr>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/97c8b587-9bfc-420e-9b7d-1f8e5df8e9a2</link><guid isPermaLink="false">https://pinecast.com/guid/97c8b587-9bfc-420e-9b7d-1f8e5df8e9a2</guid><pubDate>Wed, 27 Sep 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Hero File: Sohcahtoa</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:10:07</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/a98d9324-e6f0-40b3-b091-37a918d233ec/PCC_Volume_0_Special_Hero_File_Sohcahtoa.mp3?x-source=rss&amp;x-episode=97c8b587-9bfc-420e-9b7d-1f8e5df8e9a2" length="9728564" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Hero File: Penance</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In today's special Hero File episode we pierce the mask of the hero Penance. Where does her witchy power come from? Will we ever discover her mysterious past? Can anything contain her awesome power?  </p>
+        <p>Penance, the Nova is played by Elsbeth Denman.  </p>
+        <hr>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/9677b391-f1fa-483f-b7a4-ac20864877cc</link><guid isPermaLink="false">https://pinecast.com/guid/9677b391-f1fa-483f-b7a4-ac20864877cc</guid><pubDate>Tue, 26 Sep 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Hero File: Penance</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:10:19</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/c1e28219-f5ba-4b81-961c-73ee93517fad/PCC_Volume_0_Special_Hero_File_Penance.mp3?x-source=rss&amp;x-episode=9677b391-f1fa-483f-b7a4-ac20864877cc" length="14880801" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Hero File: Puck</title><description><![CDATA[<h1>Episode Notes</h1>
+        <p>In today's special Hero File episode we pierce the mask of the hero Puck. Who is he? Why does he wear a mask? Why is that mask so creepy?  </p>
+        <p>Puck, The Doomed is played by James Malloy  </p>
+        <hr>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a>.<br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a>.<br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games.</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <strong>@ProteanCity</strong><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out what thrilling adventures lie ahead!</strong></p>
+        <p>Find out more on the <a href="http://proteancity.com">Protean City Comics website</a>.</p>]]></description><link>http://proteancity.com/episode/91f50feb-98a5-42bd-bf3e-c7b70c0709c6</link><guid isPermaLink="false">https://pinecast.com/guid/91f50feb-98a5-42bd-bf3e-c7b70c0709c6</guid><pubDate>Mon, 25 Sep 2017 12:00:00 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Hero File: Puck</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/75302506-4523-41a8-8902-da4eb37de0c0/Protean-City-Logo-2000.png" /><itunes:duration>00:11:52</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/470c1d5a-8efe-4746-810b-5088c57c7534/PCC_Volume_0_Special_Hero_File_Puck.mp3?x-source=rss&amp;x-episode=91f50feb-98a5-42bd-bf3e-c7b70c0709c6" length="11408230" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        <item><title>Volume 0 - Special Signal Light Worldbuilding</title><description><![CDATA[<p>In this Volume 0 episode, James Malloy, Brandon Leon-Gambetta, and Elsbeth Denman sit down to play hack of Microscope that James wrote specifically to build a city for a game of Masks.  </p>
+        <p>Introduction voiced by <a href="http://www.peterdegiglio.com">Peter DeGiglio</a><br>
+        All music was composed by <a href="https://www.3dreamscreative.com">Jim Malloy</a><br>
+        <em>Masks: A New Generation</em> is a game by Brendan Conway and published by Magpie Games</p>
+        <p>This podcast is created thanks to the financial support of backers on <a href="http://www.patreon.com/StopHackandRoll">Patreon</a><br>
+        Join us at in our <a href="http://www.discord.stophackandroll.com">Discord</a> or follow us on twitter <em>@ProteanCity</em><br>
+        Subscribe to Protean City Comics on iTunes or anywhere podcasts are found.  </p>
+        <p><strong>Join us next Wednesday to find out more about our daring Heroes</strong></p>]]></description><link>http://proteancity.com/episode/2ffc4174-f973-49e7-ac17-d355da77d487</link><guid isPermaLink="false">https://pinecast.com/guid/2ffc4174-f973-49e7-ac17-d355da77d487</guid><pubDate>Sun, 17 Sep 2017 20:30:57 -0000</pubDate><itunes:author>SHR Network</itunes:author><itunes:subtitle>Special Signal Light Worldbuilding</itunes:subtitle><itunes:image href="https://pinecast-storage.s3.amazonaws.com/podcasts/covers/6a213646-6715-485d-a11d-4517a0ebea9a/Protean-City-Logo-3000.png" /><itunes:duration>01:52:38</itunes:duration>
+        <itunes:explicit>yes</itunes:explicit>
+        <enclosure url="https://pinecast-storage.s3.amazonaws.com/podcasts/4d6ce7f0-96cc-4dfe-9232-ae04f30cfc78/audio/c77716d6-4294-4318-bd54-0abfda9b6c27/PCC_Volume_0_Special_Microscope_World_Building.mp3?x-source=rss&amp;x-episode=2ffc4174-f973-49e7-ac17-d355da77d487" length="61470407" type="audio/mp3" />
+        <itunes:episodeType>bonus</itunes:episodeType>
+        </item>
+        </channel>
+        </rss>
+    http_version: 
+  recorded_at: Tue, 06 Feb 2018 02:03:54 GMT
+recorded_with: VCR 4.0.0
