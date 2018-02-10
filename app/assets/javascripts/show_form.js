@@ -8,7 +8,10 @@ $(document).ready(function () {
       data: { 'rss_feed': { url: rssUrl } },
       dataType: 'json',
       success: function(data) {
-        data.forEach(function (story) {
+        $("#show_title").val(data.title);
+        $("#show_description").val(data.description);
+        $("#creator_name").val(data.creator_name);
+        data.episodes.forEach(function (story) {
           $("#stories").append("<li class='episode'>" + story.title + "</li>");
         })
       }

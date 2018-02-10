@@ -1,5 +1,5 @@
-class RssFeedConverter
-  attr_reader :feed
+class RssFeedConverter < ActiveModelSerializers::Model
+  attr_reader :episodes, :title, :description, :creator_name
 
   def self.execute(url)
     xml = Faraday.get(url).body
@@ -8,13 +8,11 @@ class RssFeedConverter
   end
 
   def initialize(feed)
-    @feed = feed
+    @episodes = feed.entries.map { |entry| RssFeedEpisode.new(entry) }
+    @title = feed.title
+    @description = feed.description
+    @creator_name = feed.itunes_owners.first.name
   end
-
-  def episodes
-    feed.entries.map { |entry| RssFeedEpisode.new(entry) }
-  end
-
 end
 
 class RssFeedEpisode
